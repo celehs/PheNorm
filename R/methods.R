@@ -5,9 +5,9 @@
 #' @param nm.utl name of healthcare utlization (e.g. note count, encounter_num etc)
 #' @param dat all data columns need to be log-transformed and need column names
 #' @param nm.X additional features other than the main ICD and NLP
-#' @param corrupt.rate
-#' @param train.size
-#' @return
+#' @param corrupt.rate rate for random corruption denoising, between 0 and 1
+#' @param train.size size of training sample, default value 10000
+#' @return probability, beta coefficient
 #' @export
 PheNorm.Prob = function(nm.logS.ori,nm.utl,dat, nm.X=NULL,corrupt.rate=0.3,train.size=10000){
   #browser()
