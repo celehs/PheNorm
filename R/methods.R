@@ -1,4 +1,7 @@
 
+#' @importFrom stats ecdf lm pnorm quantile rbinom
+NULL
+
 #' Fit the phenotyping algorithm with EHR features. The function requires a surrogate (ICD) and
 #' the health utilization as its input and can leverage other EHR features (optional) to assist
 #' risk prediction. Uses the healthcare utilization in input.
