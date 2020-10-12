@@ -50,7 +50,7 @@ dataset.
 
 ``` r
 #set.seed(1234)
-#dat <- read.csv()
+#dat <- read.csv("https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv")
 ```
 
 Apply the PheNorm
