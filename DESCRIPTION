@@ -3,8 +3,9 @@ Type: Package
 Title: Unsupervised, gold-standard label free, phenotyping algorithm for electronic health record (EHR) data
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Clara-Lea", "Bonzel", role = c("aut"), email = "clbonzel@hsph.harvard.edu"),
-    person("Molei", "Liu", role = c("aut", "cre"), email = "molei_liu@g.harvard.edu"),
+    person("Yuri", "Ahuja", role = c("aut", "cre"), email = "yuri_ahuja@hms.harvard.edu"),
+    person("Clara-Lea", "Bonzel", role = "aut", email = "clbonzel@hsph.harvard.edu"),
+    person("Molei", "Liu", role = "aut"),
     person("Chuan", "Hong", role = "aut"),
     person("Tianxi", "Cai", role = "aut")
     )
