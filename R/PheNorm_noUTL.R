@@ -29,7 +29,7 @@ PheNorm_noUTL <- function(nm.logS.ori, dat, nm.X = NULL, corrupt.rate = 0.3, tra
   }
   if (length(nm.logS.ori) > 1) {
     postprob <- apply(S.norm,2,
-                      function(x){
+                      function(x) {
                         fit <- normalmixEM2comp2(x, lambda = 0.5,
                                                  mu=quantile(x, probs = c(1/3, 2/3)), sigsqrd = 1
                                                  )
@@ -37,7 +37,7 @@ PheNorm_noUTL <- function(nm.logS.ori, dat, nm.X = NULL, corrupt.rate = 0.3, tra
                         }
                       )
     keep <- apply(postprob,1,
-                  function(x){
+                  function(x) {
                     if (sum(x > 0.5) >= 2) x[which(x < 0.5)] = NA else x[which(x > 0.5)] = NA
                     x
                     }
@@ -45,7 +45,7 @@ PheNorm_noUTL <- function(nm.logS.ori, dat, nm.X = NULL, corrupt.rate = 0.3, tra
     keep <- as.matrix(1 * (keep >= 0))
     if (nrow(keep) != nrow(dat)) {keep = t(keep)}
     rowMeans(S.norm * keep, na.rm = TRUE)
-  }else{
+  } else {
     unlist(S.norm)
   }
 }

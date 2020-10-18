@@ -10,7 +10,7 @@ PheNorm.Prob(
   dat,
   nm.X = NULL,
   corrupt.rate = 0.3,
-  train.size = 10 * nrow(dat)
+  train.size = 10000
 )
 }
 \arguments{

@@ -18,7 +18,7 @@
 PheNorm.Prob <- function(nm.logS.ori, nm.utl, dat, nm.X = NULL, corrupt.rate = 0.3, train.size = 10 * nrow(dat)) {
   dat <- as.matrix(dat)
   S.ori <- dat[, nm.logS.ori, drop = FALSE]
-  utl <- dat[,nm.utl]
+  utl <- dat[, nm.utl]
   a.hat <- apply(S.ori, 2, function(S) {findMagicNumber(S, utl)$coef})
   S.norm <- S.ori - VTM(a.hat, nrow(dat)) * utl
   if (!is.null(nm.X)) {

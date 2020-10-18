@@ -1,7 +1,10 @@
 
-#' Fit the phenotyping algorithm with EHR features. The function requires a surrogate (ICD) and
-#' the health utilization as its input and can leverage other EHR features (optional) to assist
-#' risk prediction.
+#' Fit the phenotyping algorithm PheNorm using EHR features
+#'
+#' @description
+#' The function requires as input a surrogate, such as the ICD code
+#' It can leverage other EHR features (optional) to assist risk prediction.
+#'
 #' @param nm.logS.ori name of the surrogates (log(ICD+1), log(NLP+1) and log(ICD+NLP+1)
 #' @param dat all data columns need to be log-transformed and need column names
 #' @param nm.X additional features other than the main ICD and NLP
@@ -9,7 +12,7 @@
 #' @param train.size size of training sample, default value 10 * nrow(dat)
 #' @return beta coefficient
 #' @export
-PheNorm_noUTL_beta <- function(nm.logS.ori, dat, nm.X = NULL, corrupt.rate = 0.3, train.size = 10 * nrow(dat)){
+PheNorm_noUTL_beta <- function(nm.logS.ori, dat, nm.X = NULL, corrupt.rate = 0.3, train.size = 10 * nrow(dat)) {
   dat <- as.matrix(dat)
   S.ori <- dat[, nm.logS.ori, drop = FALSE]
   S.norm <- S.ori

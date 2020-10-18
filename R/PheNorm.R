@@ -14,7 +14,7 @@
 #' @param train.size size of training sample, default value 10 * nrow(dat)
 #' @return S.norm
 #' @export
-PheNorm <- function(nm.logS.ori, nm.utl, dat, nm.X = NULL, corrupt.rate = 0.3, train.size = 10 * nrow(dat)){
+PheNorm <- function(nm.logS.ori, nm.utl, dat, nm.X = NULL, corrupt.rate = 0.3, train.size = 10 * nrow(dat)) {
   dat <- as.matrix(dat)
   S.ori <- dat[, nm.logS.ori, drop = FALSE]
   utl <- dat[, nm.utl]

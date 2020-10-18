@@ -2,9 +2,7 @@
 % Please edit documentation in R/PheNorm_noUTL_beta.R
 \name{PheNorm_noUTL_beta}
 \alias{PheNorm_noUTL_beta}
-\title{Fit the phenotyping algorithm with EHR features. The function requires a surrogate (ICD) and
-the health utilization as its input and can leverage other EHR features (optional) to assist
-risk prediction.}
+\title{Fit the phenotyping algorithm PheNorm using EHR features}
 \usage{
 PheNorm_noUTL_beta(
   nm.logS.ori,
@@ -29,7 +27,6 @@ PheNorm_noUTL_beta(
 beta coefficient
 }
 \description{
-Fit the phenotyping algorithm with EHR features. The function requires a surrogate (ICD) and
-the health utilization as its input and can leverage other EHR features (optional) to assist
-risk prediction.
+The function requires as input a surrogate, such as the ICD code
+It can leverage other EHR features (optional) to assist risk prediction.
 }
