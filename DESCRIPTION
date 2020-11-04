@@ -15,3 +15,7 @@ Encoding: UTF-8
 RoxygenNote: 7.1.1
 URL: https://github.com/celehs/PheNorm/settings
 BugReports: https://github.com/celehs/PheNorm/issues
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

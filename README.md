@@ -1,7 +1,7 @@
 PheNorm
 ================
 
-## Overview
+### Overview
 
 The PheNorm R package provides an unsupervised phenotyping algorithm,
 for electronic health record (EHR) data. A human-annotated training set
@@ -41,39 +41,14 @@ following code executed in R will get you started:
 
 ``` r
 install.packages("remotes",repos = "http://cran.us.r-project.org")
-```
-
-    ## 
-    ## The downloaded binary packages are in
-    ##  /var/folders/g6/tcrpz9115rbfkpj7vtp_sx5w0000gn/T//RtmpjzmtNY/downloaded_packages
-
-``` r
 remotes::install_github("celehs/PheNorm")
-```
-
-    ## Skipping install of 'PheNorm' from a github remote, the SHA1 (ce356924) has not changed since last install.
-    ##   Use `force = TRUE` to force installation
-
-``` r
 library(PheNorm)
 ```
 
-### Example on simulated dataset
+### Reference
 
-Next, we propose a simple example in which we fit PheNorm to a simulated
-dataset.
-
-``` r
-set.seed(1234)
-fit.dat <- read.csv("https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv")
-```
-
-Apply the PheNorm
-algorithm
-
-``` r
-fit.phenorm=PheNorm.Prob("ICD", "utl", fit.dat, nm.X = NULL, corrupt.rate=0.3, train.size=nrow(fit.dat))
-head(fit.phenorm$probs)
-```
-
-    ## [1] 0.4662471 0.5384967 0.5455023 0.5419286 0.6086979 0.5320170
+Yu S, Ma Y, Gronsbell J, Cai T, Ananthakrishnan AN, Gainer VS, Churchill
+SE, Szolovits P, Murphy SN, Kohane IS, Liao KP, Cai T. Enabling
+phenotypic big data with PheNorm. J Am Med Inform Assoc. 2018 Jan
+1;25(1):54-60. doi: 10.1093/jamia/ocx111. PMID: 29126253; PMCID:
+PMC6251688. <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6251688/>
