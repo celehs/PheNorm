@@ -1,10 +1,11 @@
 Package: PheNorm
 Type: Package
 Title: Unsupervised, gold-standard label free, phenotyping algorithm for electronic health record (EHR) data
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
-    person("Yuri", "Ahuja", role = c("aut", "cre"), email = "yuri_ahuja@hms.harvard.edu"),
-    person("Clara-Lea", "Bonzel", role = "aut", email = "clbonzel@hsph.harvard.edu"),
+    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org")
+    person("Sheng", "Yu", role = "aut"),
+    person("Clara-Lea", "Bonzel", role = "aut"),
     person("Molei", "Liu", role = "aut"),
     person("Chuan", "Hong", role = "aut"),
     person("Tianxi", "Cai", role = "aut")
