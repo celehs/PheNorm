@@ -3,7 +3,7 @@ Type: Package
 Title: Unsupervised, gold-standard label free, phenotyping algorithm for electronic health record (EHR) data
 Version: 0.1.0
 Authors@R: c(
-    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org")
+    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org"),
     person("Sheng", "Yu", role = "aut"),
     person("Clara-Lea", "Bonzel", role = "aut"),
     person("Molei", "Liu", role = "aut"),
