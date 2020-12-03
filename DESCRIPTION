@@ -1,20 +1,21 @@
 Package: PheNorm
 Type: Package
-Title: Unsupervised, gold-standard label free, phenotyping algorithm for electronic health record (EHR) data
+Title: Unsupervised, Gold-Standard Label Free, Phenotyping Algorithm for Electronic Health Record (EHR) Data
 Version: 0.1.0
 Authors@R: c(
-    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org"),
     person("Sheng", "Yu", role = "aut"),
+    person("Victor", "Castro", role = "aut"),
     person("Clara-Lea", "Bonzel", role = "aut"),
     person("Molei", "Liu", role = "aut"),
     person("Chuan", "Hong", role = "aut"),
-    person("Tianxi", "Cai", role = "aut")
+    person("Tianxi", "Cai", role = "aut"),
+    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org")
     )
-Description: The algorithm combines the most predictive variable, such as count of the main International Classification of Diseases (ICD) codes, and other EHR features (e.g. health utilization and processed clinical note data), to obtain a score for accurate risk prediction and disease classification. In particular, it normalizes the surrogate to resemble gaussian mixture and leverages the remaining features through random corruption denoising.
+Description: The algorithm combines the most predictive variable, such as count of the main International Classification of Diseases (ICD) codes, and other EHR features (e.g. health utilization and processed clinical note data), to obtain a score for accurate risk prediction and disease classification. In particular, it normalizes the surrogate to resemble gaussian mixture and leverages the remaining features through random corruption denoising. Background and details about the method can be found at Yu et al. (2018) <doi:10.1093/jamia/ocx111>.
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.1.1
-URL: https://github.com/celehs/PheNorm/settings
+URL: https://github.com/celehs/PheNorm
 BugReports: https://github.com/celehs/PheNorm/issues
 Suggests: 
     knitr,
