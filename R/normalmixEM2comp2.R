@@ -53,3 +53,4 @@ normalmixEM2comp2 <- function (x, lambda, mu, sigsqrd, eps = 1e-08, maxit = 1000
   out
 }
 
+

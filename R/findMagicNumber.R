@@ -28,4 +28,3 @@ findMagicNumber = function(surrogate, log_note_count, n.boot = 10) {
   }
   return(list("coef" = mean(a.values), "error" = mean(err.values)))
 }
-
