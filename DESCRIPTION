@@ -5,11 +5,11 @@ Version: 0.1.0
 Authors@R: c(
     person("Sheng", "Yu", role = "aut"),
     person("Victor", "Castro", role = "aut"),
-    person("Clara-Lea", "Bonzel", role = "aut"),
+    person("Clara-Lea", "Bonzel", role = c("aut", "cre"), email = "clbonzel@hsph.harvard.edu"),
     person("Molei", "Liu", role = "aut"),
     person("Chuan", "Hong", role = "aut"),
     person("Tianxi", "Cai", role = "aut"),
-    person(family = "PARSE LTD", role =  c("aut", "cre"), email = "software@parse-health.org")
+    person(family = "PARSE LTD", role = "aut", email = "software@parse-health.org")
     )
 Description: The algorithm combines the most predictive variable, such as count of the main International Classification of Diseases (ICD) codes, and other Electronic Health Record (EHR) features (e.g. health utilization and processed clinical note data), to obtain a score for accurate risk prediction and disease classification. In particular, it normalizes the surrogate to resemble gaussian mixture and leverages the remaining features through random corruption denoising. Background and details about the method can be found at Yu et al. (2018) <doi:10.1093/jamia/ocx111>.
 License: GPL-3
