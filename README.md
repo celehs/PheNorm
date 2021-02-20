@@ -1,5 +1,5 @@
-PheNorm
-================
+
+# PheNorm: Unsupervised Gold-Standard Label Free Phenotyping Algorithm for EHR Data
 
 ## Overview
 
@@ -14,15 +14,15 @@ of the main International Classification of Diseases (ICD) codes, with
 other EHR features. Those include for example health utilization and
 processed clinical note data. PheNorm aims to obtain a score for
 accurate risk prediction and disease classification. In particular, it
-normalizes the surrogate to resemble gaussian mixture and leverages the
+normalizes the surrogate to resemble Gaussian mixture and leverages the
 remaining features through random corruption denoising. PheNorm
 automatically generates phenotyping algorithms and demonstrates the
 capacity for EHR-driven annotations to scale to the next level
 phenotypic big data.
 
-The data consists of ICD codes and additional features.
+The input data consists of ICD codes and additional features.
 
-The output is:
+The PheNorm output includes:
 
 -   the predicted probability of the risk of having the phenotype
 
@@ -53,7 +53,7 @@ Install development version from GitHub:
 
 ``` r
 # install.packages("remotes")
-remotes::install_github("celehs/MAP")
+remotes::install_github("celehs/PheNorm")
 ```
 
 ## Reference

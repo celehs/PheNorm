@@ -1,17 +1,18 @@
 ---
-title: "PheNorm"
 output: github_document
 ---
+
+# PheNorm: Unsupervised Gold-Standard Label Free Phenotyping Algorithm for EHR Data
 
 ## Overview
 
 The PheNorm R package provides an unsupervised phenotyping algorithm, for electronic health record (EHR) data. A human-annotated training set with gold-standard disease status labels is usually required to build an algorithm for phenotyping based on a set of predictive features. PheNorm, however, does not require expert-labeled samples for training.
 
-The algorithm combines the most predictive variables, such as the counts of the main International Classification of Diseases (ICD) codes, with other EHR features. Those include for example health utilization and processed clinical note data. PheNorm aims to obtain a score for accurate risk prediction and disease classification. In particular, it normalizes the surrogate to resemble gaussian mixture and leverages the remaining features through random corruption denoising. PheNorm automatically generates phenotyping algorithms and demonstrates the capacity for EHR-driven annotations to scale to the next level phenotypic big data.
+The algorithm combines the most predictive variables, such as the counts of the main International Classification of Diseases (ICD) codes, with other EHR features. Those include for example health utilization and processed clinical note data. PheNorm aims to obtain a score for accurate risk prediction and disease classification. In particular, it normalizes the surrogate to resemble Gaussian mixture and leverages the remaining features through random corruption denoising. PheNorm automatically generates phenotyping algorithms and demonstrates the capacity for EHR-driven annotations to scale to the next level phenotypic big data.
 
-The data consists of ICD codes and additional features.
+The input data consists of ICD codes and additional features.
 
-The output is: 
+The PheNorm output includes: 
 
 - the predicted probability of the risk of having the phenotype 
 
