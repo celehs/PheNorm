@@ -77,23 +77,34 @@
 
     
     
-<p>Next, we propose a simple example in which we fit PheNorm to a simulated dataset.</p>
+<p>We show a simple example in which we fit PheNorm to a simulated dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/celehs/PheNorm">PheNorm</a></span><span class="op">)</span></code></pre></div>
-<p>Load the data</p>
+<p>Load the simulated data</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span>
-<span class="va">fit.dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="va">fit.dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">fit.dat</span><span class="op">)</span>
+<span class="co">#&gt; 'data.frame':    500 obs. of  4 variables:</span>
+<span class="co">#&gt;  $ X1 : num  -1.38 0.995 0.524 1.48 1.344 ...</span>
+<span class="co">#&gt;  $ X2 : num  -1.73 -0.624 1.757 -0.563 0.296 ...</span>
+<span class="co">#&gt;  $ ICD: num  0.693 1.386 1.386 1.386 1.792 ...</span>
+<span class="co">#&gt;  $ utl: num  3.78 3.91 3.83 3.87 3.64 ...</span></code></pre></div>
 <p>Apply the PheNorm algorithm</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">fit.phenorm</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PheNorm.Prob.html">PheNorm.Prob</a></span><span class="op">(</span>
-  <span class="st">"ICD"</span>, <span class="st">"utl"</span>, <span class="va">fit.dat</span>, 
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span>
+<span class="va">fit.phenorm</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/PheNorm.Prob.html">PheNorm.Prob</a></span><span class="op">(</span>
+  nm.logS.ori <span class="op">=</span> <span class="st">"ICD"</span>, 
+  nm.utl <span class="op">=</span> <span class="st">"utl"</span>, 
+  dat <span class="op">=</span> <span class="va">fit.dat</span>, 
   nm.X <span class="op">=</span> <span class="cn">NULL</span>, 
   corrupt.rate <span class="op">=</span> <span class="fl">0.3</span>, 
   train.size <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">fit.dat</span><span class="op">)</span>
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">fit.phenorm</span><span class="op">$</span><span class="va">probs</span><span class="op">)</span>
-<span class="co">#&gt; [1] 0.4662471 0.5384967 0.5455023 0.5419286 0.6086979 0.5320170</span></code></pre></div>
+<span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">fit.phenorm</span><span class="op">)</span>
+<span class="co">#&gt; List of 2</span>
+<span class="co">#&gt;  $ probs: num [1:500] 0.466 0.538 0.546 0.542 0.609 ...</span>
+<span class="co">#&gt;  $ betas: NULL</span></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

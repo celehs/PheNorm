@@ -7,7 +7,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Next, we propose a simple example in which we fit PheNorm to a simulated dataset.
+We show a simple example in which we fit PheNorm to a simulated dataset.
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -20,21 +20,27 @@ knitr::opts_chunk$set(
 library(PheNorm)
 ```
 
-Load the data
+Load the simulated data
 
 ```{r}
-set.seed(1234)
 fit.dat <- read.csv("https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv")
+str(fit.dat)
 ```
 
 Apply the PheNorm algorithm
 
 ```{r}
+set.seed(1234)
 fit.phenorm <- PheNorm.Prob(
-  "ICD", "utl", fit.dat, 
+  nm.logS.ori = "ICD", 
+  nm.utl = "utl", 
+  dat = fit.dat, 
   nm.X = NULL, 
   corrupt.rate = 0.3, 
   train.size = nrow(fit.dat)
 )
-head(fit.phenorm$probs)
+```
+
+```{r}
+str(fit.phenorm)
 ```
