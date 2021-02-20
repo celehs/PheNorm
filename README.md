@@ -1,7 +1,7 @@
 PheNorm
 ================
 
-### Overview
+## Overview
 
 The PheNorm R package provides an unsupervised phenotyping algorithm,
 for electronic health record (EHR) data. A human-annotated training set
@@ -24,9 +24,9 @@ The data consists of ICD codes and additional features.
 
 The output is:
 
-  - the predicted probability of the risk of having the phenotype
+-   the predicted probability of the risk of having the phenotype
 
-  - the coefficient beta corresponding to all the features additional to
+-   the coefficient beta corresponding to all the features additional to
     the ICD codes.
 
 The main steps of the algorithm are presented in the following
@@ -34,18 +34,29 @@ flowchart:
 
 ![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6251688/bin/ocx111f1.jpg)
 
-### Installation
+## Installation
 
-The PheNorm package can be installed using the remotes package. The
-following code executed in R will get you started:
+The PheNorm package can be installed from CRAN or GitHub. The following
+code executed in R will get you started:
+
+### Stable Version
+
+Install stable version from CRAN:
 
 ``` r
-install.packages("remotes",repos = "http://cran.us.r-project.org")
-remotes::install_github("celehs/PheNorm")
-library(PheNorm)
+install.packages("PheNorm")
 ```
 
-### Reference
+### Development Version
+
+Install development version from GitHub:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("celehs/MAP")
+```
+
+## Reference
 
 Yu S, Ma Y, Gronsbell J, Cai T, Ananthakrishnan AN, Gainer VS, Churchill
 SE, Szolovits P, Murphy SN, Kohane IS, Liao KP, Cai T. Enabling

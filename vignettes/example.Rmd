@@ -2,12 +2,13 @@
 title: "Example on simulated dataset"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{my-vignette}
+  %\VignetteIndexEntry{Example on simulated dataset}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 Next, we propose a simple example in which we fit PheNorm to a simulated dataset.
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -15,21 +16,25 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 ```{r}
 library(PheNorm)
 ```
 
 Load the data
+
 ```{r}
 set.seed(1234)
 fit.dat <- read.csv("https://raw.githubusercontent.com/celehs/PheNorm/master/data-raw/data.csv")
 ```
 
 Apply the PheNorm algorithm
+
 ```{r}
-fit.phenorm=PheNorm.Prob("ICD", "utl", fit.dat, nm.X = NULL, corrupt.rate=0.3, train.size=nrow(fit.dat))
+fit.phenorm <- PheNorm.Prob(
+  "ICD", "utl", fit.dat, 
+  nm.X = NULL, 
+  corrupt.rate = 0.3, 
+  train.size = nrow(fit.dat)
+)
 head(fit.phenorm$probs)
 ```
-
-

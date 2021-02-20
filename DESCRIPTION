@@ -1,7 +1,7 @@
 Package: PheNorm
 Type: Package
 Title: Unsupervised Gold-Standard Label Free Phenotyping Algorithm for EHR Data 
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Sheng", "Yu", role = "aut"),
     person("Victor", "Castro", role = "aut"),

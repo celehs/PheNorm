@@ -1,5 +1,5 @@
 ^PheNorm\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
-
-data-raw
+docs/
+data-raw/
