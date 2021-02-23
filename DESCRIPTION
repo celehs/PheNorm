@@ -15,7 +15,7 @@ Description: The algorithm combines the most predictive variable, such as count 
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.1.1
-URL: https://github.com/celehs/PheNorm
+URL: https://celehs.github.io/PheNorm/
 BugReports: https://github.com/celehs/PheNorm/issues
 Suggests: 
     knitr,

@@ -1,6 +1,8 @@
 
 # PheNorm: Unsupervised Gold-Standard Label Free Phenotyping Algorithm for EHR Data
 
+[![CRAN](https://www.r-pkg.org/badges/version/PheNorm)](https://CRAN.R-project.org/package=PheNorm)
+
 ## Overview
 
 The PheNorm R package provides an unsupervised phenotyping algorithm,
@@ -24,9 +26,9 @@ The input data consists of ICD codes and additional features.
 
 The PheNorm output includes:
 
--   the predicted probability of the risk of having the phenotype
+  - the predicted probability of the risk of having the phenotype
 
--   the coefficient beta corresponding to all the features additional to
+  - the coefficient beta corresponding to all the features additional to
     the ICD codes.
 
 The main steps of the algorithm are presented in the following
@@ -36,18 +38,11 @@ flowchart:
 
 ## Installation
 
-The PheNorm package can be installed from CRAN or GitHub. The following
-code executed in R will get you started:
-
-### Stable Version
-
 Install stable version from CRAN:
 
 ``` r
 install.packages("PheNorm")
 ```
-
-### Development Version
 
 Install development version from GitHub:
 
@@ -56,7 +51,7 @@ Install development version from GitHub:
 remotes::install_github("celehs/PheNorm")
 ```
 
-## Reference
+## Citation
 
 Yu S, Ma Y, Gronsbell J, Cai T, Ananthakrishnan AN, Gainer VS, Churchill
 SE, Szolovits P, Murphy SN, Kohane IS, Liao KP, Cai T. Enabling
